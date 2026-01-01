@@ -18,7 +18,48 @@ find_package(glfw3 3.4 REQUIRED)
 find_package(glm REQUIRED)
 find_package(GLEW REQUIRED)
 
-add_executable(untitled main.cpp)
+add_executable(untitled main.cpp
+        Shader.h
+        Model.h
+        Model.cpp
+        DrawableObject.h
+        DrawableObject.cpp
+        Shader.cpp
+        ShaderProgram.h
+        ShaderProgram.cpp
+        Transformation.h
+        Application.h
+        Application.cpp
+        Transformation.cpp
+        Rotate.h
+        Rotate.cpp
+        Transform.h
+        Transform.cpp
+        Scale.h
+        Scale.cpp
+        Scene.h
+        Scene.cpp
+        DynamicRotate.h
+        DynamicRotate.cpp
+        CompositeTransformation.h
+        CompositeTransformation.cpp
+        Models/triangle.h
+        Camera.h
+        Camera.cpp
+        Light.cpp
+        Light.h
+        FireFly.h
+        FireFlyObject.h
+        FireFlyObject.cpp
+        Texture.cpp
+        Texture.h
+        TextureLoader.cpp
+        TextureLoader.h
+        Texture.cpp
+        SkyBox.cpp
+        SkyBox.h)
+
+target_include_directories(untitled PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 target_link_libraries(untitled PRIVATE
         glfw
